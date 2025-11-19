@@ -20,6 +20,5 @@ public class Primes {
                 primeCount++;
             }
         }
-        System.err.println("There are " + primeCount + " primes between 2 and " + (isPrime.length - 1) + " (" + (primeCount * 100 / (isPrime.length - 2)) + "% are primes)");
-    }
+System.out.println("There are " + primeCount + " primes between 2 and " + (isPrime.length - 1) + " (" + (primeCount * 100 / (isPrime.length - 1)) + "% are primes)");    }
 }
