@@ -40,14 +40,17 @@ public class MyString {
         if (str1.length() < str2.length()) {
            return false;
         }
-        if (str2 == "") {
+        if (str2.length() == 0) {
             return true;
         }
 
         for(int i=0; i<(arr1.length - arr2.length +1); i++) //runs until we can no longer fit str2 word to what's 
         {                                                   //left of str1 that we are checking.
-        if (arr1[i] == arr2[0]) { // only if the first letter is the same        
-        for(int j=1;j<arr2.length;j++){ // if the word is contained, returns True and breaks the loop.
+        if (arr1[i] == arr2[0]) {// only if the first letter is the same        
+            if (arr2.length == 1) {
+                return true;
+            }
+            for(int j=1;j<arr2.length;j++){ // if the word is contained, returns True and breaks the loop.
             if(arr1[j+i] == arr2[j])
             {
                isContained = true;
